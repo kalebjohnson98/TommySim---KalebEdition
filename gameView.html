@@ -19,13 +19,13 @@
 <a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('get water'); $ctrl.minusOneAction()">Get Water</button></a>
 
 <p>Go Out Into the Wild - High Risk, High Reward</p>
-<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('explore'); $ctrl.minusOneAction()">Explore</button></a>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('explore'); $ctrl.minusOneAction()">Go Explore</button></a>
 
 <p>Houses: {{$ctrl.resources.houses}}</p>
 <a href=#!/createNewVillager><button ng-click="$ctrl.choiceSelect('build a house'); $ctrl.minusOneAction(); $ctrl.winChecker()">Build a House(Costs 5 Wood)</button></a>
 
 <p>Number of Wells: {{$ctrl.resources.wells}} (Each well made gives you 1 water per day)</p>
-<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('build a well'); $ctrl.minusOneAction()">Get a Well(Costs 6 Wood)</button></a>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('build a well'); $ctrl.minusOneAction()">Build a Well(Costs 6 Wood)</button></a>
 
 <p>Weapons: {{$ctrl.resources.weapons}} (Weapons raise your chance of survival during an 'explore' move -- this does not mean guaranteed survival)</p>
 <a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('build a weapon'); $ctrl.minusOneAction()">Build a Weapon(Costs 3 Wood)</button></a>
