@@ -11,9 +11,9 @@
         vm.resources = {
         town: "",
         villagers: [],
-        wood: 110,
-        food: 116,
-        water: 116,
+        wood: 0,
+        food: 6,
+        water: 6,
         houses: 1,
         wells: 0,
         days: 1,
