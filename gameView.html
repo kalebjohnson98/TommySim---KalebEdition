@@ -1,0 +1,43 @@
+<span><a href=#!/gameStart><button>HOME</button></a></span><span>- CLICK TO GO TO THE HOMEPAGE, THEN REFRESH THERE TO RESTART THE GAME</span>
+<p>Instructions/How To Win/How to Lose --- Building a house adds a new villager. Each villager adds an action point allowed per day. At the end of everyday, you lose food and water depending on how many villagers you have and your action points will reset. Once you build your 5th house and get your 5th villager, you win the game. Be tactical though, hitting 0 Food or Water means a villager will die every turn one is at 0. If you run out of villagers, you lose.</p>
+
+<h4>Welcome to {{$ctrl.resources.town}}</h4>
+
+<span>Villagers: </span>
+<span ng-repeat="villager in $ctrl.resources.villagers"> {{villager}}, </span>
+
+<h4>Day: {{$ctrl.resources.days}}</h4>
+<h5>Action Points: {{$ctrl.resources.actionPoints}}</h5>
+
+<p>Wood Count: {{$ctrl.resources.wood}}</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('get wood'); $ctrl.minusOneAction()">Get Wood</button></a>
+
+<p>Food Count: {{$ctrl.resources.food}}</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('get food'); $ctrl.minusOneAction()">Get Food</button></a>
+
+<p>Water Count: {{$ctrl.resources.water}}</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('get water'); $ctrl.minusOneAction()">Get Water</button></a>
+
+<p>Go Out Into the Wild - High Risk, High Reward</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('explore'); $ctrl.minusOneAction()">Explore</button></a>
+
+<p>Houses: {{$ctrl.resources.houses}}</p>
+<a href=#!/createNewVillager><button ng-click="$ctrl.choiceSelect('build a house'); $ctrl.minusOneAction(); $ctrl.winChecker()">Build a House(Costs 5 Wood)</button></a>
+
+<p>Number of Wells: {{$ctrl.resources.wells}} (Each well made gives you 1 water per day)</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('build a well'); $ctrl.minusOneAction()">Get a Well(Costs 6 Wood)</button></a>
+
+<p>Weapons: {{$ctrl.resources.weapons}} (Weapons raise your chance of survival during an 'explore' move -- this does not mean guaranteed survival)</p>
+<a href=#!/yourMove><button ng-click="$ctrl.choiceSelect('build a weapon'); $ctrl.minusOneAction()">Build a Weapon(Costs 3 Wood)</button></a>
+
+<br>
+<p>Scroll down to see your weapons</p>
+<br>
+
+
+<p>Your Arsenal Consists Of:</p>
+<p>Large Wood Sword: {{$ctrl.resources.largeWSword}}</p>
+<p>Normal Wood Sword: {{$ctrl.resources.woodSwords}}</p>
+<p>Bow n Arrows: {{$ctrl.resources.bows}}</p>
+<p>Spears: {{$ctrl.resources.spears}}</p>
+<p>Sharp Sticks: {{$ctrl.resources.sticks}}</p>
