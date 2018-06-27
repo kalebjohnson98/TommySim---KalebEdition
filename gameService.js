@@ -57,7 +57,7 @@
         //check win
         vm.checkWin = function(){
             if(vm.resources.villagers.length >= 5){
-                alert("Congratulations! You beat TommySim2.0!");
+                alert("Congratulations! You beat TommySim---Kaleb Edition!");
             }
             else{
                 console.log("continue playing");
@@ -121,10 +121,11 @@
                         vm.resources.houses;
                 }
                 else{
+                    vm.resources.actionPoints++;
                     alert("Sorry, you don't have enough wood for that..");
                     $("a").click(function( event ) {
                         event.preventDefault();
-                    }); 
+                    });
                 }
             }
             else if(choice === "build a well"){
@@ -137,10 +138,11 @@
                         vm.resources.wells;
                 }
                 else{
+                    vm.resources.actionPoints++;
                     alert("Sorry, you don't have enough wood for that..");
                     $("a").click(function( event ) {
                         event.preventDefault();
-                    }); 
+                    });
                 }
             }
 
@@ -450,6 +452,13 @@
                     vm.choiceChosen = choice;
                     return vm.choiceChosen,
                         vm.reward;
+                }
+                else{
+                    vm.resources.actionPoints++;
+                    alert("Sorry, you don't have enough wood for that..");
+                    $("a").click(function( event ) {
+                        event.preventDefault();
+                    });
                 }
             }
         }
